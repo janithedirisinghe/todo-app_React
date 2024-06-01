@@ -1,30 +1,54 @@
 import React from 'react';
-
-interface Activity {
-  id: number;
-  text: string;
-  date: string;
-}
-
-const activities: Activity[] = [
-  { id: 1, text: "Kushantha Charuka created Contract #00124 need John Beige's signature", date: 'Sep 16, 2022 at 11:30 AM' },
-  { id: 2, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium neque', date: 'Sep 16, 2022 at 11:45 AM' },
-  { id: 3, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium neque', date: 'Sep 16, 2022 at 11:45 AM' },
-  // Add more activities as necessary
-];
+import { ReactComponent as Avatar1 } from '../images/Avatar-2.svg';
 
 const ActivityFeed: React.FC = () => {
   return (
-    <div className="bg-white p-6 rounded shadow">
-      <h3 className="text-xl font-semibold mb-4">Activity Feed</h3>
-      <ul>
-        {activities.map(activity => (
-          <li key={activity.id} className="mb-4">
-            <p>{activity.text}</p>
-            <span className="text-sm text-gray-600">{activity.date}</span>
-          </li>
-        ))}
-      </ul>
+    <div className="bg-white rounded shadow border">
+      <h3 className="text-xl font-semibold mb-4 border-b p-6">Activity Feed</h3>
+      <div className="grid grid-cols-11 gap-4 border-b">
+        <div className="col-span-1 ml-5 mt-9">
+          <Avatar1/>
+        </div>
+        <div className="col-span-10">
+          <ul>
+            <li className="mb-4 p-6 m-3">
+              <p>Kushantha Charuka created Contract #00124 need John Beige's signature</p>
+              <span className="text-sm text-gray-600">Sep 16, 2022 at 11:45 AM</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div className="grid grid-cols-11 gap-4 border-b">
+        <div className="col-span-1 ml-5 mt-9">
+          <Avatar1/>
+        </div>
+        <div className="col-span-10">
+          <ul>
+            <li className="mb-4 border-b p-6 m-3">
+              <p>Kushantha Charuka created Contract #00124 need John Beige's signature</p>
+              <span className="text-sm text-gray-600">Sep 16, 2022 at 11:45 AM</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+
+      <div className="grid grid-cols-11 gap-4 border-b">
+        <div className="col-span-1 ml-5 mt-9">
+          <Avatar1/>
+        </div>
+        <div className="col-span-10">
+          <ul>
+            <li className="mb-4 border-b p-6 m-3">
+              <p>Kushantha Charuka created Contract #00124 need John Beige's signature</p>
+              <span className="text-sm text-gray-600">Sep 16, 2022 at 11:45 AM</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
